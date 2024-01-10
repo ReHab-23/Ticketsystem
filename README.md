@@ -8,4 +8,6 @@ In Ermangelung von Zeit ist das Projekt noch nicht fertig geworden (10.01.2024)
 
 Es fehlen noch Funktion zum Abschließen der Tickets, Löschen der Tickets.
 
+Die UI Dateien weichen Teilweise von der fertigen GUI ab, da sie im laufe des Bearbeitung erweitert oder gekürzt wurden.
+
 Dieses System habe ich zusammen mit Rene, Habermann verfasst
