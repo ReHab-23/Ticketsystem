@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registrieren</class>
+ <widget class="QDialog" name="Registrieren">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>505</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>50</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Registrieren</string>
+  </property>
+  <widget class="QLineEdit" name="lineEditVorname">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>100</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditNachname">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>150</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditRaum">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>290</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditKurs">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>240</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditEMail">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>340</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>191</x>
+     <y>80</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vorname</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>191</x>
+     <y>130</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nachname</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>191</x>
+     <y>220</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kurs</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>191</x>
+     <y>270</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Raum</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>191</x>
+     <y>320</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>E-Mail</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonRegister">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>380</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Registrieren</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonZurueck">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>450</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zurück</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPasswort">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>200</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>191</x>
+     <y>180</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Passwort</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditVorname</tabstop>
+  <tabstop>lineEditNachname</tabstop>
+  <tabstop>lineEditPasswort</tabstop>
+  <tabstop>lineEditKurs</tabstop>
+  <tabstop>lineEditRaum</tabstop>
+  <tabstop>lineEditEMail</tabstop>
+  <tabstop>pushButtonRegister</tabstop>
+  <tabstop>pushButtonZurueck</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonRegister</sender>
+   <signal>pressed()</signal>
+   <receiver>lineEditEMail</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>226</x>
+     <y>415</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRegister</sender>
+   <signal>pressed()</signal>
+   <receiver>lineEditRaum</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRegister</sender>
+   <signal>pressed()</signal>
+   <receiver>lineEditKurs</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRegister</sender>
+   <signal>pressed()</signal>
+   <receiver>lineEditPasswort</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>208</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRegister</sender>
+   <signal>pressed()</signal>
+   <receiver>lineEditNachname</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>249</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonRegister</sender>
+   <signal>pressed()</signal>
+   <receiver>lineEditVorname</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>200</x>
+     <y>400</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
