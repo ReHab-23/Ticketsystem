@@ -20,4 +20,4 @@ Dies ist eine Änderung direkt in Github verfasst!
 
 Absolut alles ist machbar!
 
-Dies ist ein diff :)
+Die diff war blödsinn, bitte etwas neues überlegen!
