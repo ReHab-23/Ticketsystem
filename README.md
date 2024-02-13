@@ -19,3 +19,5 @@ Dies ist eine Änderung direkt in Github verfasst!
 
 
 Absolut alles ist machbar!
+
+Dies ist ein diff :)
