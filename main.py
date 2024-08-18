@@ -86,7 +86,7 @@ class Frm_main(QMainWindow):
                     ctypes.windll.user32.MessageBoxW(0, "Die Eingaben sind richtig", "Erfolg", 1)
 
                     #Überprüfung der Berechtigung wird eingeleitet
-                    mycursor.execute(f"SELECT Klasse From benutzer where ID = {username}")
+                    mycursor.execute(f"SELECT Klasse From benutzer where ID = {username};")
                     klasse = mycursor.fetchone()
                     user_help.set_user(username)
 
@@ -160,7 +160,7 @@ class Frm_main(QMainWindow):
                 passwortcursosr = mydb.cursor()
                 self.user = user_help.get_user()
                 mycursor = mydb.cursor()
-                mycursor.execute(f"SELECT Klasse From benutzer where ID = {username}")
+                mycursor.execute(f"SELECT Klasse From benutzer where ID = {username};")
                 klasse = mycursor.fetchone()
                 if klasse[0] == 1:
                     password = self.ui_user.txt_passwort.text()
@@ -187,7 +187,7 @@ class Frm_main(QMainWindow):
     def on_verwaltung_window_shown(self, event):
         self.ui_verwalt.treeView_2.clear()
         cursor2 = mydb.cursor()
-        cursor2.execute("SELECT * from benutzer WHERE Klasse > 0")
+        cursor2.execute("SELECT * from benutzer WHERE Klasse > 0;")
         for row in cursor2.fetchall():
             item = QTreeWidgetItem(self.ui_verwalt.treeView_2)
             pass
@@ -196,7 +196,7 @@ class Frm_main(QMainWindow):
                 pass
         self.ui_verwalt.treeView.clear()
         cursor1 = mydb.cursor()
-        cursor1.execute("SELECT * from benutzer WHERE Klasse = 0")
+        cursor1.execute("SELECT * from benutzer WHERE Klasse = 0;")
         for row in cursor1.fetchall():
             item = QTreeWidgetItem(self.ui_verwalt.treeView)
             pass
@@ -220,13 +220,13 @@ class Frm_main(QMainWindow):
         userid = self.ui_verwalt.lineEdit.text()
         klasse = self.ui_verwalt.spinBox.text()
         values = klasse, userid
-        statment = f'UPDATE benutzer SET Klasse=%s WHERE ID = %s'
+        statment = f'UPDATE benutzer SET Klasse=%s WHERE ID = %s;'
         zuweiser.execute(statment, values)
         mydb.commit()
         zuweiser.close()
         self.ui_verwalt.treeView_2.clear()
         cursor2 = mydb.cursor()
-        cursor2.execute("SELECT * from benutzer WHERE Klasse > 0")
+        cursor2.execute("SELECT * from benutzer WHERE Klasse > 0;")
         for row in cursor2.fetchall():
             item = QTreeWidgetItem(self.ui_verwalt.treeView_2)
             pass
@@ -235,7 +235,7 @@ class Frm_main(QMainWindow):
                 pass
         self.ui_verwalt.treeView.clear()
         cursor1 = mydb.cursor()
-        cursor1.execute("SELECT * from benutzer WHERE Klasse = 0")
+        cursor1.execute("SELECT * from benutzer WHERE Klasse = 0;")
         for row in cursor1.fetchall():
             item = QTreeWidgetItem(self.ui_verwalt.treeView)
             pass
@@ -250,13 +250,13 @@ class Frm_main(QMainWindow):
         entfernencursor = mydb.cursor()
         userid = self.ui_verwalt.lineEdit.text()
         value = userid
-        statmentent= f'DELETE FROM benutzer WHERE ID = %s'
+        statmentent= f'DELETE FROM benutzer WHERE ID = %s;'
         entfernencursor.execute(statmentent, (value,))
         mydb.commit()
         entfernencursor.close()
         self.ui_verwalt.treeView_2.clear()
         cursor2 = mydb.cursor()
-        cursor2.execute("SELECT * from benutzer WHERE Klasse > 0")
+        cursor2.execute("SELECT * from benutzer WHERE Klasse > 0;")
         for row in cursor2.fetchall():
             item = QTreeWidgetItem(self.ui_verwalt.treeView_2)
             pass
@@ -265,7 +265,7 @@ class Frm_main(QMainWindow):
                 pass
         self.ui_verwalt.treeView.clear()
         cursor1 = mydb.cursor()
-        cursor1.execute("SELECT * from benutzer WHERE Klasse = 0")
+        cursor1.execute("SELECT * from benutzer WHERE Klasse = 0;")
         for row in cursor1.fetchall():
             item = QTreeWidgetItem(self.ui_verwalt.treeView)
             pass
@@ -283,7 +283,7 @@ class Frm_main(QMainWindow):
         salt = bcrypt.gensalt()
         hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
         value = (hashed_password.decode('utf-8'), userid)
-        statement = f'UPDATE benutzer SET Passwort = %s  WHERE ID = %s'
+        statement = f'UPDATE benutzer SET Passwort = %s  WHERE ID = %s;'
         try:
             cursor.execute(statement, value)
             mydb.commit()

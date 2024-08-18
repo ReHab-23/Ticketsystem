@@ -1,0 +1,6 @@
+VIRTUAL ENVIRONMENT
+    .\venv\Scripts\activate
+    deactivate
+
+REQUIREMENTS
+    pip install -r requirements. txt 
